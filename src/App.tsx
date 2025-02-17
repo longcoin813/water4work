@@ -1,15 +1,17 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
+import Header from "./components/Header";
+import CalendarPage from "./components/HomePage";
 
 const App = () => {
   return (
     <Router>
-      <Navbar />
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/calendar" element={<CalendarPage />} />
+        <Route path="/product" element={<Cart />} />
       </Routes>
     </Router>
   );
